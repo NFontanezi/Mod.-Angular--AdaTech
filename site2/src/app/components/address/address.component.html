@@ -1,41 +1,30 @@
  <!-- End Main -->
 
   <div class="container">
-    <h1 class="text-center mb-4">Endereço</h1>
+    <h1 class="text-center mb-4">{{ addressData.sectionTitle }}</h1>
 
-    <!--teste-->
-    <p>
-      teste
-    </p>
-
-    <!--teste-->
-    <p [innerHTML]=" getCity2() "> </p>
-
-    <!--leitura variavel {{}}-->
-    <p>
-       {{endereco}}
-    </p>
-
-    <!--leitura de propriedade chumbada}-->
-    <p innerHTML = "{{addressData2.street}}, {{addressData2.number}}"></p>
 
     <p>
       <!--!data {{}}-->
-      {{addressData.data.street}}, {{addressData.data.number}}
+      {{addressData.data.street}}, {{addressData.data.number}}, {{addressData.data.complement}},     {{addressData.data.district}}
     </p>
     <p>
-      {{addressData.data.complement}}
+     {{addressData.data.zipCode}}  -  {{addressData.data.city}}, {{addressData.data.state}}
     </p>
-    <p>
-      {{addressData.data.district}}
-    </p>
-    <p>
-      {{addressData.data.city}}, {{addressData.data.state}}
-    </p>
-    <p>
-      {{addressData.data.zipCode}}
-    </p>
-    <p [innerHTML]=" getCity() "> </p>
+
+
+
+    <!--teste-->
+   <!-- <p [innerHTML]=" getCity2() "> </p>-->
+
+    <!--leitura variavel {{}}-->
+    <!--<p>{{endereco}}</p>-->
+
+    <!--leitura de propriedade chumbada}-->
+    <!--<p innerHTML = "{{addressData2.street}}, {{addressData2.number}}"></p>-->
+    <!--<p [innerHTML]=" getCity() "> </p>-->
+
+
   </div>
 
 

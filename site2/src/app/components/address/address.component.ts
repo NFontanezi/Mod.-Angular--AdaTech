@@ -12,6 +12,8 @@ export class AddressComponent implements OnInit {
   @Input () public addressData!: AdressDataSection;
   @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
+
+  /*
   public endereco: string = 'Rua xxxx';
 
   public addressData2: AddressData = {
@@ -23,7 +25,7 @@ export class AddressComponent implements OnInit {
     district: 'Conjunto Castelo Branco',
     zipCode: '69911-262'
   }
-
+*/
   constructor() {
 
   }
@@ -33,14 +35,14 @@ export class AddressComponent implements OnInit {
   }
 
   public getCity(): void {
-    console.log('Formulário enviado!');
+   // console.log('Formulário enviado!');
     console.log(this.addressData.data.city) //usa o ng model
     }
-
-    public getCity2(): string {
-    return "Santo Andre";//usa o ng model
-      }
-
+/*
+ public getCity2(): string {
+ return "Santo Andre";//usa o ng model
+}
+*/
 
 
 }

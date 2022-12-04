@@ -17,6 +17,7 @@ export class HeaderComponent {
     this.elementCreated.emit('header') // metodo que emite pro pai a string qdo elemnto for exibido
   }
 
+
   public sendSearchField () : void {
     this.sendSearch.emit(this.searchData)
 
