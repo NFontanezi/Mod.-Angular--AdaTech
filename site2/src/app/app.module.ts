@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,7 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { AddressComponent } from './components/address/address.component';
 import { AboutComponent } from './components/about/about.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [

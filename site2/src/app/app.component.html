@@ -19,27 +19,27 @@
 
 <!-- Main -->
 <main id="main">
-  <!-- Carousel
+  <!-- Carousel -->
   <section id="carousel">
     <app-carousel></app-carousel>
-  </section>-->
+  </section>
   <!-- End Carousel -->
 
   <!-- Features -->
   <section id="features" class="my-5">
-    <app-features></app-features>
+    <app-features [featureData]="data.features"></app-features>
   </section>
   <!-- End Features -->
 
    <!-- About -->
    <section id="about" class="my-5">
-    <app-about></app-about>
+    <app-about [aboutData]="data.about"(elementCreated)="onElementCreated($event)"></app-about>
   </section>
   <!-- End About -->
 
   <!-- Address -->
   <section id="address" class="my-5">
-    <app-address></app-address>
+    <app-address [addressData] = "data.address"> </app-address>
   </section>
   <!-- End Addres -->
 

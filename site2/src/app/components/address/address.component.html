@@ -4,21 +4,21 @@
     <h1 class="text-center mb-4">Endereço</h1>
     <p>
       <!--!sintaxe interpolação {{}}-->
-      {{addressData.street}}, {{addressData.number}}
-
+      {{addressData.data.street}}, {{addressData.data.number}}
     </p>
     <p>
-      {{addressData.complement}}
+      {{addressData.data.complement}}
     </p>
     <p>
-      {{addressData.district}}
+      {{addressData.data.district}}
     </p>
     <p>
-      {{addressData.city}}, {{addressData.state}}
+      {{addressData.data.city}}, {{addressData.data.state}}
     </p>
     <p>
-      {{addressData.zipCode}}
+      {{addressData.data.zipCode}}
     </p>
+    <p [innerHTML]=" getCity() "> </p>
   </div>
 
 

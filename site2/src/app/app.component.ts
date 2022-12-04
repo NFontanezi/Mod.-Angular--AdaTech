@@ -51,5 +51,9 @@ export class AppComponent {
       }
     }
   }
+
+  onElementCreated(element: string): void { //metodo que recebe o evento com o tipado
+    console.log ("Elemento criado:", element)
+  }
 }
 

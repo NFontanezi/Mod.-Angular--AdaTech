@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { FeatureDataSection } from './../../Models/app-data-section-features.models';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-features',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class FeaturesComponent {
 
+  @Input () public featureData!: FeatureDataSection;
+
+  public image1: string = "../../../assets/images/feature1.png";
+  public image2: string = "../../../assets/images/feature2.png";
+  public image3: string = "../../../assets/images/feature3.png";
+  public image4: string = "../../../assets/images/feature4.png";
+
+//public image1: string = '../../../assets/images/' + this.featureData.feature1.image;
+//  public image2: string = `../../../assets/images/${this.featureData.feature2.image}`;
+//  public image3: string = `../../../assets/images/${this.featureData.feature3.image}`;
+//  public image4: string = `../../../assets/images/${this.featureData.feature4.image}`;
+
+ /*
 
   public getDestaque1(): string {
     return `
@@ -38,6 +53,7 @@ export class FeaturesComponent {
     egestas nisl orci, in cursus ipsum cursus et.
     `
   }
+  */
 
 }
 

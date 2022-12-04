@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AboutDataSection } from './../../Models/app-data-section-about.models';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+@Input() public  aboutData!: AboutDataSection;
+@Output () public elementCreated: EventEmitter<string> = new EventEmitter<string>();// avisa o componente pai, q o filho esta sendo usado na tela
+
+ngOnInit() {
+  this.elementCreated.emit('about') // metodo que emite pro pai a string qdo elemnto for exibido
+}
+
+/*
 public company: string = 'HexaVem Ltda';
 private companyName: string = 'HexaVem Ltda';
 
@@ -22,5 +31,6 @@ public getAbout(): string  { //retorno do metodo string
     </p>
   `;
 }
+*/
 
 }
