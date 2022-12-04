@@ -33,13 +33,18 @@
 
    <!-- About -->
    <section id="about" class="my-5">
-    <app-about [aboutData]="data.about"(elementCreated)="onElementCreated($event)"></app-about>
+    <app-about
+    [aboutData]="data.about"
+    (elementCreated)="onElementCreated($event)">
+  </app-about>
   </section>
   <!-- End About -->
 
   <!-- Address -->
   <section id="address" class="my-5">
-    <app-address [addressData] = "data.address"> </app-address>
+    <app-address
+    [addressData]="data.address">
+  </app-address>
   </section>
   <!-- End Addres -->
 
