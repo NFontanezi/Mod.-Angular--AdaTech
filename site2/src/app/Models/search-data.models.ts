@@ -1,3 +1,4 @@
-export interface SearchData { // precisa de model? e de tipagem?
+export interface SearchData {
+  field: string// precisa de model? e de tipagem?
 
 }

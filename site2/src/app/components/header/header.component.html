@@ -36,11 +36,12 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Seach"
+              [(ngModel)]="searchData.field" [ngModelOptions]="{standalone: true}"
               aria-label="Search"
 
             />
-             <!-- [(ngModel)]="searchData"-->
+
             <a class="btn btn-outline-light" href="#" (click)="sendSearchField()"
               >Search</a
             >

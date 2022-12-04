@@ -9,16 +9,17 @@ import { ContactFormData } from 'src/app/Models/form-data.models';
 export class ContactComponent  implements OnInit {
 
  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
+
  @Output() public sendForm: EventEmitter<ContactFormData> = new EventEmitter<ContactFormData>(); //sempre é evento de filho para pai
 
   public btnDisabled = true;
 
   public formData: ContactFormData = { // tipar via model por boa pratica
-    email: "teste@teste.com.br",                //preciso de uma propriedade para se comunicar com o ng model
-    message: "digite seu texto aqui" //ja abre com a mensagem
+  email: "",                //precisom.br de uma propriedade para se comunicar com o ng model
+  message: "" //ja abre com a mensagem
   }
 
-  constructor() { }
+constructor() { }
 
 ngOnInit() {
 setTimeout(() => {

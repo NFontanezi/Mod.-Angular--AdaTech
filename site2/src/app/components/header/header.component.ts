@@ -10,8 +10,12 @@ export class HeaderComponent {
 
   @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
-  public searchData: SearchData = "Pesquise aqui";
-  public sendSearch: EventEmitter<SearchData> = new EventEmitter<SearchData>();
+  @Output() public sendSearch: EventEmitter<SearchData> = new EventEmitter<SearchData>();
+
+  public searchData: SearchData ={
+    field: ""
+  }
+
 
   ngOnInit() {
     this.elementCreated.emit('header') // metodo que emite pro pai a string qdo elemnto for exibido

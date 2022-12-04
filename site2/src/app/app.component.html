@@ -14,7 +14,8 @@
   </head> -->
 
 <!-- Navbar -->
-<app-header (sendSearch) ="onSearchSubmitted($event)"
+<app-header
+(sendSearch) ="onSearchSubmitted($event)"
 (elementCreated)="onElementCreated($event)"
 ></app-header>
 <!-- End Navbar -->
@@ -58,7 +59,8 @@
 
   <!-- Contact -->
   <section id="contact" class="my-5">
-  <app-contact (sendForm)="onContactFormSubmitted($event)"
+  <app-contact
+  (sendForm)="onContactFormSubmitted($event)"
   (elementCreated)="onElementCreated($event)"
   ></app-contact>
   </section>
