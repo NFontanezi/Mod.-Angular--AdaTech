@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ContactFormData } from 'src/app/Models/form-data.models';
 
 @Component({
@@ -7,6 +7,8 @@ import { ContactFormData } from 'src/app/Models/form-data.models';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent  implements OnInit {
+
+ @Output() public sendForm: EventEmitter<ContactFormData> = new EventEmitter<ContactFormData>(); //sempre é evento de filho para pai
 
   public btnDisabled = true;
 
@@ -24,8 +26,9 @@ setTimeout(() => {
 }
 
   public submitForm(): void {
-  console.log('Formulário enviado!');
-  console.log(this.formData) //usa o ng model
+ // console.log('Formulário enviado!');
+ // console.log(this.formData) //usa o ng model
+  this.sendForm.emit(this.formData); //emite de volta o formulario ao pai
   }
 
   public showInputData(event: any): void {

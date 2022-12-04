@@ -1,5 +1,7 @@
+import { ContactFormData } from './Models/form-data.models';
 import { Component } from '@angular/core';
 import { AppData } from './Models/app-data-models';
+
 
 @Component({
   selector: 'app-root',
@@ -54,6 +56,10 @@ export class AppComponent {
 
   onElementCreated(element: string): void { //metodo que recebe o evento com o tipado
     console.log ("Elemento criado:", element)
+  }
+
+  onContactFormSubmitted(formData: ContactFormData): void {
+   console.log('formulario enviado com sucesso', formData);
   }
 }
 
