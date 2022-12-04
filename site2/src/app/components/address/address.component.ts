@@ -1,6 +1,6 @@
 import { AdressDataSection } from './../../Models/app-data-section-address.models';
 import { AddressData } from './../../Models/address-data.models';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-address',
@@ -10,10 +10,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AddressComponent implements OnInit {
 
   @Input () public addressData!: AdressDataSection;
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
-  /*
+  public endereco: string = 'Rua xxxx';
 
-  public addressData: AddressData = {
+  public addressData2: AddressData = {
     street: 'Rua Luiz Galvão',
     number: 254,
     complement: '3. andar, saa 306',
@@ -21,10 +22,14 @@ export class AddressComponent implements OnInit {
     city: 'Rio Branco',
     district: 'Conjunto Castelo Branco',
     zipCode: '69911-262'
-  }*/
+  }
 
   constructor() {
 
+  }
+
+  ngOnInit() {
+    this.elementCreated.emit('address')
   }
 
   public getCity(): void {
@@ -32,8 +37,10 @@ export class AddressComponent implements OnInit {
     console.log(this.addressData.data.city) //usa o ng model
     }
 
-  ngOnInit () {
+    public getCity2(): string {
+    return "Santo Andre";//usa o ng model
+      }
 
-  }
+
 
 }

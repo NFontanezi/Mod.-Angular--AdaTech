@@ -2,8 +2,25 @@
 
   <div class="container">
     <h1 class="text-center mb-4">Endereço</h1>
+
+    <!--teste-->
     <p>
-      <!--!sintaxe interpolação {{}}-->
+      teste
+    </p>
+
+    <!--teste-->
+    <p [innerHTML]=" getCity2() "> </p>
+
+    <!--leitura variavel {{}}-->
+    <p>
+       {{endereco}}
+    </p>
+
+    <!--leitura de propriedade chumbada}-->
+    <p innerHTML = "{{addressData2.street}}, {{addressData2.number}}"></p>
+
+    <p>
+      <!--!data {{}}-->
       {{addressData.data.street}}, {{addressData.data.number}}
     </p>
     <p>

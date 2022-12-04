@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
+
+  ngOnInit() {
+    this.elementCreated.emit('header') // metodo que emite pro pai a string qdo elemnto for exibido
+  }
 }
+
+

@@ -8,6 +8,7 @@ import { ContactFormData } from 'src/app/Models/form-data.models';
 })
 export class ContactComponent  implements OnInit {
 
+ @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
  @Output() public sendForm: EventEmitter<ContactFormData> = new EventEmitter<ContactFormData>(); //sempre é evento de filho para pai
 
   public btnDisabled = true;
@@ -22,8 +23,12 @@ export class ContactComponent  implements OnInit {
 ngOnInit() {
 setTimeout(() => {
   this.btnDisabled = false;
-}, 5000);
+}, 5000),
+
+
+  this.elementCreated.emit('contact')
 }
+
 
   public submitForm(): void {
  // console.log('Formulário enviado!');

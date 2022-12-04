@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
 
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
+
+  ngOnInit() {
+    this.elementCreated.emit('carrousel') // metodo que emite pro pai a string qdo elemnto for exibido
+  }
 }

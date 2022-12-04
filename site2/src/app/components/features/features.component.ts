@@ -1,6 +1,6 @@
 
 import { FeatureDataSection } from './../../Models/app-data-section-features.models';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-features',
@@ -10,11 +10,16 @@ import { Component, Input } from '@angular/core';
 export class FeaturesComponent {
 
   @Input () public featureData!: FeatureDataSection;
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
 
   public image1: string = "../../../assets/images/feature1.png";
   public image2: string = "../../../assets/images/feature2.png";
   public image3: string = "../../../assets/images/feature3.png";
   public image4: string = "../../../assets/images/feature4.png";
+
+  ngOnInit() {
+    this.elementCreated.emit('feature') // metodo que emite pro pai a string qdo elemnto for exibido
+  }
 
 //public image1: string = '../../../assets/images/' + this.featureData.feature1.image;
 //  public image2: string = `../../../assets/images/${this.featureData.feature2.image}`;
